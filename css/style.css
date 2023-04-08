@@ -1,0 +1,738 @@
+/* ----------------------
+    1. @import
+    2. Body session for all pages
+    3. Home page
+    4. Our work page
+    5. About us page
+    6. Contact us page
+------------------------ */
+
+/* --- 1. @import --- */
+@import url("reset.css");
+
+
+/* 2. Body Session */
+body {
+  font-family: raleway, Helvetica, Tahoma, sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF1D0;
+  margin: 0;
+}
+
+/* --- Screen over 1920px width --- */
+@media screen and (min-width: 1920px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .maincontent {
+    width: 1920px;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  }
+
+}
+
+
+
+/* 3. Home page */
+/* Header session */
+/* --- Mobile style --- */
+.header { 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 3vw;
+}
+
+.heading {
+  color: #FFFFFF;
+  grid-area: 1 / 1 / 2 / 2;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.heading h1 {
+  margin: 2vw;
+  font-size: 2.5vw;
+  font-weight: 100;
+}
+
+.header_left {
+  z-index: 2;
+  grid-area: 1 / 1 / 3 / 2;
+  opacity: 0; 
+}
+
+.header_left:hover {
+  background-color: rgba(6, 174, 213, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.header_left h2 {
+  margin: 40vw auto auto 10vw;
+  color: #F0C808;
+}
+
+.header_right {
+  grid-area: 1 / 2 / 3 / 3;
+  z-index: 2;
+  opacity: 0;
+  aspect-ratio: 2759 / 3679;
+}
+
+.header_right:hover {
+  background-color: rgba(6, 174, 213, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.header_right h2 {
+  margin: 40vw 10vw auto auto;
+  color: #F0C808;
+  text-align: right;
+}
+
+.nav {
+  text-align: right;
+}
+
+.nav a {
+  color: #FFFFFF;
+}
+
+.nav ul {
+  text-align: center;
+}
+
+.nav ul li a:link,
+.nav ul li a:visited {
+  display: block;
+  text-decoration: none;
+  padding: 1vw;
+  color: #FFFFFF;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+  background-color: #83d0d2;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.open {
+  grid-area: 1 / 2 / 2 /3;
+  z-index: 3;
+  color: #FFFFFF;
+  justify-self: end;
+  margin: 2vw;
+  color: #FFF1D0;
+}
+
+.hide {
+  background-color: #06aed5;
+  padding: 1vw 0 0 0;
+}
+
+.close {
+  margin: 1vw;
+}
+
+.close:hover {
+  color: #B0D300;
+}
+
+/* --- Tablet style --- */
+@media screen and (min-width: 48em) {
+  .nav {
+    font-size: 3vw;
+  }
+}
+
+/* 1st and 2nd paragraph */
+.para1 {
+  text-align: center;
+}
+
+.para1 h3 {
+  color: #B0D300;
+  margin: 3vw 0 0;
+  font-size: 4vw;
+}
+
+.para1 p {
+  color: #086788;
+  font-family: playfair-display;
+  font-style: italic;
+  font-size: 3vw;
+  margin: 2vw 15% 3vw;
+}
+
+/* homepage's gallery session */
+.gallery {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(8, 100vw);
+  font-size: 10vw;
+}
+
+.gallery > div {
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.gallery p {
+  width: 100%;
+  opacity: 0;
+  z-index: 3;
+  font-size: 12vw;
+  padding: 38vw 0;
+  font-weight: 800;
+} 
+
+.img1 p:hover {
+  background-color: rgba(240, 200, 8, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img2 p:hover {
+  background-color: rgba(221, 28, 26, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img3 p:hover {
+  background-color: rgba(176, 211, 0, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img4 p:hover {
+  background-color: rgba(6, 174, 213, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img5 p:hover {
+  background-color: rgba(6, 174, 213, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img6 p:hover {
+  background-color: rgba(176, 211, 0, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+          
+.img7 p:hover {
+  background-color: rgba(221, 28, 26, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.img8 p:hover {
+  background-color: rgba(240, 200, 8, 0.5);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* --- Tablet Style --- */
+@media screen and (min-width: 48em) {
+  .para1 p {
+    font-size: 2vw;
+    margin: 2vw 15% 3vw;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 50vw);
+  }
+
+  .gallery p {
+    font-size: 6vw;
+    padding: 19vw 0;
+  } 
+}
+
+/* --- Screen --- */
+@media screen and (min-width: 80em) {
+  .gallery {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 25vw);
+  }
+
+  .gallery > div {
+    aspect-ratio: 1 / 1;
+    font-size: 2vw;
+  }
+
+  .gallery p {
+    font-size: 3.5vw;
+    padding: 9vw 0;
+  } 
+
+  .img1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  
+  .img2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  
+  .img3 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  
+  .img4 {
+    grid-area: 1 / 4 / 2 / 5;
+    
+  }
+}
+
+/* --- Screen over 1920px width --- */
+@media screen and (min-width: 1920px) {
+  /* to keep the shape of images to be square */
+    .gallery {
+      grid-template-rows: repeat(2, 480px);
+    }
+  
+    .gallery p {
+      font-size: 55px;
+      padding: 185px 0;
+    } 
+  
+  }
+
+/* Footer session */
+.footer {
+  display: grid;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+.copyright {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #06aed5;
+  padding-top: 2vw;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-color: darkgray;
+  border-width: 0.2vw;
+}
+
+.email {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: #06aed5;
+  padding-bottom: 2vw;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-color: darkgray;
+  border-width: 0.2vw;
+}
+
+/* .email h4 {
+  border-right-style: solid;
+  border-left-style: solid;
+  border-color: darkgray;
+  border-width: 0.2vw;
+} */
+
+.contact {
+  grid-area: 3 / 1 / 4 / 2;
+  background-color: #b0d300;
+  padding: 2vw 0;
+  border-style: solid;
+  border-color: darkgray;
+  border-width: 0.2vw;
+}
+
+/* --- Tablet Style --- */
+@media screen and (min-width: 48em) {
+  .footer {
+    grid-template-columns: repeat(4, 25%);
+  }
+
+  .footer > div {
+    height: 12vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+  }
+
+  .copyright {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-content: flex-start;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-right-style: none;
+    border-left-style: solid;
+    border-color: darkgray;
+    border-width: 0.2vw;
+    padding: 0;
+  }
+
+  .copyright h4 {
+    margin: 0 0 0 1.5vw;
+  }
+  
+  .email {
+    grid-area: 1 / 2 / 2 / 4;
+    justify-content: center;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-color: darkgray;
+    border-width: 0.2vw;
+    padding: 0;
+  }
+  
+  .contact {
+    grid-area: 1 / 4 / 2 / 5;
+    text-align: end;
+    justify-content: flex-end;
+    border-style: solid;
+    border-color: darkgray;
+    border-width: 0.2vw;
+  }
+
+  .contact h4 {
+    margin: 0 1.5vw 0;
+  }
+  
+}
+
+/* --- 4. Our work page --- */
+/* header session */
+.headingcolor2 {
+  height: 40vw;
+  z-index: 2;
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.heading2 {
+  font-size: 10vw;
+  color: #FFF1D0;
+  grid-area: 1 / 1 / 3 / 3;
+  z-index: 3;
+  position: relative;
+  top: 31.6vw;
+  left: -0.3vw;
+}
+
+/* Gallery session */
+/* --- Tablet style --- */
+@media screen and (min-width: 48em) {
+  .workgallery {
+    display: grid;
+    grid-template-columns: 49.8% 49.8%;
+    justify-content: space-between;
+  }
+
+  .workcol1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .workgallery img {
+    height: 100%;
+    object-fit: cover; 
+  } 
+
+  .workimg1 {
+    height: 37.35%;
+    margin-top: 1%;
+  }
+
+  .workimg2 {
+    height: 37.35%;
+    margin: 1% 0;
+  }
+  
+  .workimg3 {
+    height: 24.9%;
+    margin-bottom: 1%;
+  }  
+
+  .workcol2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .workimg4 {
+    height: 19.9%;
+    margin-top: 1%;
+  }
+
+  .workimg5 {
+    height: 19.9%;
+    margin: 1% 0;
+  }
+
+  .workimg6 {
+    height: 19.9%;
+  }
+
+  .workimg7 {
+    height: 39.8%;
+    margin: 1% 0;
+  }
+
+  .workcol3 {
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+  }
+
+  .workimg8 {
+    height: 37%;
+    margin: 1% 0;
+  }
+
+  .workimg9 {
+    height: 24.7%;
+  }
+
+  .workimg10 {
+    height: 37%;
+    margin: 1% 0;
+  }
+
+  .workcol4 {
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between; 
+  }
+
+  .workimg11 {
+    height: 44%;
+    margin: 1% 0 0.3%;
+  }
+
+  .workimg12 {
+    height: 23%;
+  }
+
+  .workimg13 {
+    height: 31.8%;
+    margin: 0.3% 0 1%;
+  }
+  
+}
+
+/* --- Screen --- */
+@media screen and (min-width: 80em) {
+  .workgallery {
+    display: grid;
+    grid-template-columns: 24.9% 24.9% 24.9% 24.9%;
+  }
+}
+
+
+
+/* 5. About us page */
+/* header session */
+.heading3 {
+  font-size: 6vw;
+  top: 35vw;
+  left: -0.03vw;
+}
+
+/* 1st gallery session */
+.aboutusgallery1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutusimg1,
+.aboutusimg2 {
+  background-color: #F0C808;
+}
+
+.desc1,
+.desc2 {
+  height: 60vw;
+  background-color: #F0C808;
+  color: #FFF1D0;
+  font-weight: 700;
+  font-size: 7vw;
+  width: 100%;
+}
+
+.desc1 {
+  text-align: right;
+  padding: 30vw 10vw 0 0;
+} 
+
+.desc2 {
+  padding: 30vw 0 0 10vw;
+} 
+
+/* --- Tablet style --- */
+@media screen and (min-width: 48em) {
+  .aboutusrow1 {
+    display: flex;
+    width: 100%;
+  }
+
+  .aboutusrow2 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin: 0.1vw 0 0;
+  }
+
+  .aboutusrow2 {
+    justify-content: end;
+  }
+
+  .aboutusimg1,
+  .aboutusimg2 {
+    width: 49.5%; 
+  }  
+
+  .aboutusimg1 img {
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .aboutusimg2 img {
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  .desc1,
+  .desc2 {
+    height: auto;
+    width: 50.5%;
+    font-size: 3vw;
+  }
+
+  .desc1 {
+    text-align: right;
+    padding: 20vw 7vw 0 0;
+  } 
+  
+  .desc2 {
+    padding: 20vw 0 0 7vw;
+  } 
+
+}
+
+/* Contact us page */
+/* correspondence session */
+.corres {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.contactimg2,
+.contactimg4 {
+  width: 80%;
+  margin: 5vw 10%;
+}
+
+.info1,
+.info2,
+.icon1,
+.icon2 {
+  margin: 0 10%;
+  color: #086788;
+}
+
+.info1,
+.info2 {
+  font-size: 5vw;
+}
+
+.bluespace {
+  height: 2vw;
+  width: 95%;
+  background-color: #086788;
+  justify-self: center;
+  margin: 2vw 0;
+}
+
+/* --- Tablet Style --- */
+@media screen and (min-width: 48em) {
+  .corres {
+    grid-template-columns: 49.5% 1% 49.5%;
+    grid-template-rows: repeat(5, auto);
+    padding: 0 0 3vw;
+  }
+
+  .contactimg1 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 3vw 0;
+  }
+
+  .contactimg1 img {
+    height: 100%;
+    width: 95%;
+    object-fit: cover; 
+    margin: 0 2.5%;
+  }
+
+  .contactimg2 {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 0 10%;
+  }
+
+  .info1 {
+    grid-area: 3 / 1 / 4 / 2;
+    font-size: 3vw;
+  }
+
+  .icon1 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .bluespace {
+    grid-area: 1 / 2 / 5 / 3;
+    height: 98%;
+    width: 100%;
+    margin-top: 2vw;
+  }
+
+  .contactimg3 {
+    grid-area: 1 / 3 / 2 / 4;
+    margin: 3vw 0;
+  }
+
+  .contactimg3 img {
+    height: 100%;
+    width: 95%;
+    object-fit: cover; 
+    margin: 0 2.5%;
+  }
+
+  .contactimg4 {
+    grid-area: 2 / 3 / 3 / 4;
+    margin: 0 10%;
+  }
+
+  .info2 {
+    grid-area: 3 / 3 / 4 / 4;
+    font-size: 3vw;
+  }
+
+  .icon2 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+
+}
